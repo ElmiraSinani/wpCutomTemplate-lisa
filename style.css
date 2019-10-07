@@ -1,0 +1,788 @@
+/*   
+Theme Name: Lisa Clampitt
+Theme URI: http://Lisa.Clampitt
+Description: This is a WordPress Theme template Lisa Clampitt -- WordPress v3.9.1
+Author: Lisa Clampitt
+Version: 1
+*/
+
+@font-face {
+    font-family: 'old_standard_ttitalic';
+    src: url('css/fonts/oldstandardtt-italic-webfont.eot');
+    src: url('css/fonts/oldstandardtt-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/oldstandardtt-italic-webfont.woff') format('woff'),
+         url('css/fonts/oldstandardtt-italic-webfont.ttf') format('truetype'),
+         url('css/fonts/oldstandardtt-italic-webfont.svg#old_standard_ttitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'old_standard_ttregular';
+    src: url('css/fonts/oldstandardtt-regular-webfont.eot');
+    src: url('css/fonts/oldstandardtt-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/oldstandardtt-regular-webfont.woff') format('woff'),
+         url('css/fonts/oldstandardtt-regular-webfont.ttf') format('truetype'),
+         url('css/fonts/oldstandardtt-regular-webfont.svg#old_standard_ttregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'alegreya_sansmedium_italic';
+    src: url('css/fonts/alegreyasans-mediumitalic-webfont.eot');
+    src: url('css/fonts/alegreyasans-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/alegreyasans-mediumitalic-webfont.woff') format('woff'),
+         url('css/fonts/alegreyasans-mediumitalic-webfont.ttf') format('truetype'),
+         url('css/fonts/alegreyasans-mediumitalic-webfont.svg#alegreya_sansmedium_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'alegreya_sansbold';
+    src: url('css/fonts/alegreyasans-bold-webfont.eot');
+    src: url('css/fonts/alegreyasans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/alegreyasans-bold-webfont.woff') format('woff'),
+         url('css/fonts/alegreyasans-bold-webfont.ttf') format('truetype'),
+         url('css/fonts/alegreyasans-bold-webfont.svg#alegreya_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'alegreya_sansthin';
+    src: url('css/fonts/alegreyasans-thin-webfont.eot');
+    src: url('css/fonts/alegreyasans-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/alegreyasans-thin-webfont.woff') format('woff'),
+         url('css/fonts/alegreyasans-thin-webfont.ttf') format('truetype'),
+         url('css/fonts/alegreyasans-thin-webfont.svg#alegreya_sansthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'alegreya_sansregular';
+    src: url('css/fonts/alegreyasans-regular-webfont.eot');
+    src: url('css/fonts/alegreyasans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/alegreyasans-regular-webfont.woff') format('woff'),
+         url('css/fonts/alegreyasans-regular-webfont.ttf') format('truetype'),
+         url('css/fonts/alegreyasans-regular-webfont.svg#alegreya_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'alegreya_sansmedium';
+    src: url('css/fonts/alegreyasans-medium-webfont.eot');
+    src: url('css/fonts/alegreyasans-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/alegreyasans-medium-webfont.woff') format('woff'),
+         url('css/fonts/alegreyasans-medium-webfont.ttf') format('truetype'),
+         url('css/fonts/alegreyasans-medium-webfont.svg#alegreya_sansmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #1a1a1a;
+    font-size: 16px;
+    color: #000;
+    margin-top: 6.5em;
+}
+
+::-webkit-input-placeholder {
+   color: #fafafa;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #fafafa;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #fafafa;
+}
+
+:-ms-input-placeholder {  
+    color: #fafafa;
+}
+
+.header{
+    overflow: auto;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #1a1a1a;
+    height: 6.7em;
+    padding: 0 46px;
+    z-index: 1000;
+}
+.logo{
+    width: 15%;
+    float: left;
+}
+#home{
+    padding-bottom: 8.2em;
+}
+#about{
+    padding-bottom: 1.7em;
+}
+.top_menu{
+    width: 75.5%;
+    float: left;
+    text-align: right;
+}
+.social_block{
+    width: 8%;
+    padding-top: 2.9em;
+    float: right;
+    list-style-type: none;
+    overflow: auto;
+}
+.social_block li{
+    float: left;
+}
+.social_block li:first-child{
+/*    padding-left: 20px;*/
+}
+.social_block [class^="icon_"],
+.social_block [class*=" icon_"]{
+    width: 1.45em;
+    height: 1.4em;
+    display: inline-block;
+    vertical-align: text-top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    margin-right: 0.3em;
+    text-indent: 9000px;
+    overflow: hidden;
+}
+.icon_fb{
+    background: url(images/icon_fb.png);
+}
+.icon_in{
+    background: url(images/icon_in.png);
+}
+.icon_tw{
+    background: url(images/icon_tw.png);
+}
+.nav-header{
+    padding-top: 3em;
+    display: inline-block;
+    list-style-type: none;
+    font-family: "alegreya_sansmedium";
+    font-size: 1em;
+    line-height: 1em;
+}
+.nav-header li{
+    float: left;   
+    text-transform: uppercase;
+    border-right: 1px solid #9a9a9a;
+}
+.nav-header li:last-child{
+    border-right: none;
+}
+.nav-header li:last-child{
+    border-right: none;
+}
+.nav-header li a{
+    color: #9a9a9a;
+    margin: 0 0.9em;
+    text-decoration: none;
+}
+
+.nav-header li a:hover{
+    color: #fff;    
+    border-bottom: 1px solid #fff;    
+}
+.container{
+    width: 100%;
+    clear: both;
+    /*margin-top: 50px;*/
+}
+.page-item{
+    position: relative;
+    overflow: auto;
+    background-repeat: no-repeat !important;
+    background-position: 0 0 !important;
+    padding: 3em 0;
+}
+.page-item.full{
+   background-size: 100% auto !important;   
+}
+.page-item .page_footer_nav{
+    position: absolute;
+    bottom: 0;
+    right: 2.5em;
+    z-index: 200;    
+}
+.page_footer_nav .for_men,
+.page_footer_nav .for_women{
+    display: block;
+    padding: 2.7em 0.6em 0.6em 1em;
+    line-height: 0.3em;
+    width: 2.7em;
+    color: #fff;
+    float: left;
+    background: #323232;
+    text-align: right;
+    font-size: 1.45em;
+    margin-right: 0.5em;
+    text-decoration: none;
+    font-family: "old_standard_ttitalic";
+}
+.page_footer_nav .for_women{
+    margin-right: 0;
+}
+.page_footer_nav .for_men:hover{
+    background: #2E4980;
+}
+.page_footer_nav .for_women:hover{
+    background: #550C47;
+}
+.page_footer_nav .for_men span,
+.page_footer_nav .for_women span{
+    font-size: 0.6em;
+    margin-top: 0.8em;
+    display: block;
+}
+.page-content{
+    display: inline-block;
+    width: 100%;
+    min-height: 450px;
+    padding-bottom: 3.5em;
+    position: relative;
+}
+.page-title{
+    font-family: "alegreya_sansthin";
+    color: #fff;
+    margin: 0 10% 1em 9.4%;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    font-size: 1.4em;
+    line-height: 1em;
+    margin-top: -0.5em;
+    text-shadow: 2px 1px 4px rgba(0, 0, 0, 1);
+}
+.quickEdit{
+    position: absolute;  
+    z-index: 500;
+    color: #fff;
+    padding:10px 20px;
+    text-decoration: none;
+    top: 20px;
+    right: 0;
+    background: #c80000;
+}
+#the-process{
+    background: #1a1a1a; 
+}
+.welcome_post{
+    float: right;
+    margin: 11.7em 9em;    
+    text-align: center;
+}
+.welcome_title{
+    font-size: 5.4em;
+    line-height: 1em;
+    font-family: "old_standard_ttregular";
+    
+}
+.welcome_sub_title{
+    font-family: "alegreya_sansthin";
+    font-size: 1.9em;
+    letter-spacing: 0.35em;
+    color: #b5b5b5;
+    
+}
+.welcome_content{
+    font-family: "alegreya_sansthin";
+    font-size: 1.8em;
+    margin-top: 0.7em;
+    letter-spacing: 0.01em;
+}
+.welcome_content a{
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 0.2em;
+    font-family: "old_standard_ttitalic";
+}
+.welcome_content a:hover{
+    
+    border-bottom: 1px solid #324c81;
+}
+.about_post, 
+.close_up_post{
+    float: left;   
+    color: #fff;
+    width: 30%;
+    margin: 0 2.5%;
+    position: relative;
+    margin-top: 1.6em;
+}
+
+
+.about_post{
+    width: 31%;
+    margin: 0 1%;
+    margin-top: 1.6em;
+}
+.close_up_post .video_icon{
+    position: absolute;
+    background: url("images/video_icon.png") 0 0 no-repeat;
+    width: 148px;
+    height: 204px;
+    right: 40%;
+    top: 20%;
+    cursor: pointer;
+    z-index: 900;
+}
+.press_video{
+    position: relative;
+        
+}
+.press_video img{
+    width: 210 !important;
+    height: 110px !important;
+}
+.press_video .youtube_icon{
+    position: absolute;
+    background: url("images/yt_icon.png") 0 0 no-repeat;
+    background-size: 100% 100%; 
+    width: 50px;
+    height: 70px;
+    right: 40%;
+    top: 17%;
+    cursor: pointer;
+    z-index: 900;
+}
+.press_img{
+    text-align: center;
+}
+.video iframe{
+    max-width: 98%;
+    height: auto;
+}
+
+.close_up_post{
+    width: 47%;
+    margin: 0 2.5%;
+}
+
+.about_post:first-child,
+.close_up_post:first-child{
+     margin-left: 0;
+}
+.about_post:last-child,
+.close_up_post:last-child{
+     margin-right: 0;
+}
+.about_post img,
+.close_up_post img{
+    width: 100%;
+    height: auto;    
+}
+.close_up_post video{
+    width: 99.9%;
+    height: auto;
+    background: #333;
+}
+.about_content,
+.close_up_content{
+    background: #333;    
+    width: 35%;
+    height: 15%;
+    padding: 1.5em 1em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-left: 8px solid #1a1a1a;
+    border-top: 8px solid #1a1a1a;
+    z-index: 150;    
+}
+.about_content{
+    width: 31%;
+    height: 6.3em;
+    padding: 1.4em 1em;
+    
+}
+.close_up_content{  
+    padding: 2em 1em 3.5em 1em;
+    width: 23%;   
+}
+.about_post_content{
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /*background: #520041;*/
+    background: #4c1a42;
+    color: #fff;
+    padding: 2em;
+    font-family: "alegreya_sansthin";
+    font-size: 1.1em;
+    opacity: 0.95;
+}
+.about_post_content span.big_txt{
+    font-size: 1.7em;
+    font-family: "old_standard_ttitalic";
+}
+.about_post_content span.big_quote{
+    font-family: "old_standard_ttitalic";
+    font-size: 1em;
+    line-height: 1em;
+    letter-spacing: 0.05em;
+}
+
+.about_title{
+    font-family: "old_standard_ttitalic";
+    font-size: 1.5em;
+    text-align: right;
+}
+.line_sub{   
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.6em 0;
+    height: 0.15em;
+    background: #fff;
+    width: 30%;
+    display: inline-block;
+    float: right;
+}
+.about_sub_title{
+    font-family: "alegreya_sansthin";
+    font-size: 0.8em;  
+    position: relative;
+    padding-top: 1.2em;
+    text-align: right;
+}
+.about_container,
+.for_women_container,
+.close_up_container,
+.the_process_container,
+.press_container{
+    margin: 0 9.4%;
+    overflow: auto;
+}
+.about_container{
+    margin: 0 5% 0 9.4%;
+}
+
+.close_up_container,
+.the_process_container{
+    padding-bottom: 6em;
+}
+
+.the_process_content{
+    width: 65%;
+    margin-left: 30%;
+    color: #e0e0e0;
+    font-size: 0.9em;
+    line-height: 1em;
+    letter-spacing: 0.05em;
+    display: inline-block;
+}
+.the_process_content h1{
+    color: #fff;
+    font-style: oblique;
+    font-size: 1.5em;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+}
+.the_process_content p{
+    font-size: 0.85em;
+    line-height: 1.5em;
+}
+.the_pr_left, .the_pr_right{
+    width: 45%;
+    float: left;
+}
+.the_pr_left{
+    margin-right: 5%;
+}
+.the_pr_item{
+    margin-bottom: 40px;
+}
+.for_women_container{
+    padding-bottom: 5em;
+}
+.form_women {
+    width: 18.4%;
+    margin-top: 4.2em;
+    float: left;
+}
+.form_women input[type='text'],
+.form_women textarea{
+    background: #3a3938;
+    width: 100%;
+    border: 0;
+    outline: none;
+    margin-bottom: 0.6em;
+    padding: 0.2em 0em 0.5em 0.9em;
+    font-size: 1em;
+    color:#ccc;
+    font-family: "alegreya_sansthin";
+}
+.form_women input[type='text']:hover,
+.form_women textarea:hover{
+    background: #540B43;
+}
+
+.review_women{
+    width: 20%;
+    margin-top: 20px;
+    float: right;
+    font-size: 1em;
+    line-height: 1.8em;
+    font-style: oblique;
+    font-family: "old_standard_ttitalic";
+}
+.review_men{
+    clear: both;
+    color: #000;
+    width: 40%;
+    font-size: 1em;
+    line-height: 1.5em;
+    font-style: oblique;
+    padding: 150px 0;
+    font-family: "old_standard_ttitalic";
+}
+.contact_item{
+    padding: 1.5em 1em;
+    color: #fff;
+    background: #1a1a1a;
+    margin-bottom: 1em;
+    opacity: 0.8;    
+    box-shadow: 1px 3px 2px #1a1a1a;
+}
+.contact_item:hover{
+    background: #520041;
+}
+.contact_title{
+    font-size: 1.5em;
+    text-align: right;
+    margin-bottom: 0.5em;
+    padding-left: 3em;
+    color: #fff;
+    font-family: "old_standard_ttitalic";
+}
+.contact_subtitle{
+    padding-top: 1.1em;
+    position: relative;
+    font-family: "alegreya_sansregular";
+    font-size: 0.9em;
+    text-align: right;
+}
+
+#press{
+    background: #999 !important;
+    
+}
+.press_container{
+    padding-bottom: 6em;
+    color: #fff;
+    font-size: 0.8em;
+   font-family: "alegreya_sansthin";
+}
+.press_container .press_post{
+    width: 30%;
+    float: left;
+    margin-right: 3%;
+    margin-bottom: 2em;
+    min-height: 230px;
+    
+}
+.press_container{
+    margin-top: 57px;
+    line-height: 1.7em;
+}
+.press_container .press_post img{
+    width: 60%;
+    height: auto;
+}
+.press_title{
+    font-size: 1.8em;
+    line-height: 1.2em;
+    font-family: "old_standard_ttitalic";
+    margin-top: 1em;
+}
+.press_subtitle{    
+    margin-bottom: 1em;
+}
+.read_more a{
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+    font-family: "old_standard_ttregular";
+    
+    font-style: oblique;
+    
+}
+#footer{
+    padding: 1em 5%;
+    overflow: auto;
+     background: #1A1A1A;
+    color: #9a9a9a;
+    font-size: 1.1em;
+    font-family: "alegreya_sansthin";
+}
+.footer_contacts{
+   
+}
+.footer-page-item{
+    position: relative;
+}
+.footer_tw{
+    background: url(images/icon_twitter.png) 0 0 no-repeat;
+    background-position: 0 50%;
+    padding: 0.7em 2em;
+    line-height: 0.5em;
+    margin-bottom: 0.2em;
+    
+}
+.footer_phone{
+    background: url(images/icon_phone.png) 0 0 no-repeat;
+    background-position: 0 50%;
+    padding: 0.7em 2em;
+    line-height: 0.5em;  
+    margin-bottom: 0.2em;
+}
+.footer_mail{
+    background: url(images/icon_mail.png) 0 0 no-repeat;
+    background-position: 0 50%;
+    padding: 0.7em 2em;
+    line-height: 0.5em;
+    margin-bottom: 0.2em;
+}
+.footer_address{
+   background: url(images/icon_post.png) 0 0 no-repeat;
+   background-position: 0 50%;
+    padding: 0.7em 2em;
+    line-height: 0.5em;
+}
+.footer_copy{
+    position: absolute;
+    bottom: 1em;
+    right: 30%;
+}
+.kgvid_wrapper{
+    margin: 0 !important;
+}
+.row-press{
+   display: inline-block;
+}
+.single_container{
+    padding: 50px 10%;
+    background: #999999;
+}
+.single_content, .single_content p{
+    color: #fff !important;
+    font-size: 1em;
+    font-family: "alegreya_sansthin";
+}
+.single-title{
+    font-family: "alegreya_sansthin";
+    color: #fff;
+    margin: 1em 0;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    font-size: 1.4em;
+    line-height: 1em;
+    margin-top: -0.5em;
+}
+.single_thumbnail img{
+    max-width: 50%;
+    height: auto;
+    margin: 0 1em 1em 0;
+}
+.single_content a, .single_content p a{
+    color: #fff !important;
+}
+.single_content img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.alignright{
+    float: right;
+    margin: 10px;
+    margin-right: 0;
+}
+.alignleft{
+    float: left;   
+    margin: 10px;
+    margin-left: 0;
+}
+.single_content ul{
+    margin-left: 20px;
+}
+.single_content ul li{
+    margin-bottom: 10px;
+}
+#testimonials{
+    background: #3c3c3c !important;
+}
+.testimonial_container{
+    margin: 0 15% 1em 15%;    
+    text-align: center;
+    position: relative;
+}
+.bx-controls-direction{
+   display: inline-block;
+    position: absolute;
+    top: -5px;
+    right: 0;
+}
+.bx-controls-direction a{
+    color: #fff;
+    text-decoration: none;
+    font-family: "old_standard_ttregular";
+}
+
+.bx-controls-direction a.bx-prev{
+    display: none;
+}
+.testimonial_container .title{
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    margin-top: 2px;
+    font-family: "old_standard_ttregular";
+}
+.testimonial_container .sub_title{
+    font-size: 1em;
+    color: #9a9a9a;    
+    font-family: "old_standard_ttitalic";
+}
+.testimonial_container .content{
+    padding: 20px 15% 15px 15%;
+    text-align: left;
+    min-height: 150px;
+    background: url(images/quote_icon.png) 5px 0 no-repeat;
+    font-family: "old_standard_ttregular";
+    color: #F7F7F7;
+}
+.testimonial_container .bx-pager-item{
+    display: inline-block;    
+    cursor: pointer;    
+}
+.testimonial_container .bx-pager-item a{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-right: 5px;
+    background: #fff;
+    text-indent: -9000px;
+}
+.testimonial_container .bx-pager-item a.active{
+    background: #550C47;
+}
